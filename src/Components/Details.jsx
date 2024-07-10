@@ -25,9 +25,9 @@ const Details = () => {
   };
 
   return (
-    <div className="max-w-4xl mx-auto px-4 py-8">
-      <h1 className="text-3xl font-semibold text-gray-900">{title}</h1>
-      <div className="details-img">
+    <div className="flex max-w-4xl mx-auto px-4 py-8">
+      <h1 className="text-3xl font-semibold text-decoration-underline text-gray-900">{title}</h1>
+      <div className="flex details-img">
       <img
         src={bookImg || defaultBookImgUrl}
         className="img-fluid w-64 rounded-start"
@@ -42,31 +42,31 @@ const Details = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
         <div className="flex flex-col space-y-4">
           <div>
-            <h2 className="text-xl font-semibold text-gray-900">About Book</h2>
+            <h3 className="text-xl font-semibold text-gray-900">About Book</h3>
             <p className="text-gray-700">{about}</p>
           </div>
           <div>
-            <h2 className="text-xl font-semibold text-gray-900">ISBN</h2>
+            <h3 className="text-xl font-semibold text-gray-900">ISBN</h3>
             <p className="text-gray-700">{ISBN}</p>
           </div>
           <div>
-            <h2 className="text-xl font-semibold text-gray-900">Published</h2>
+            <h3 className="text-xl font-semibold text-gray-900">Published</h3>
             <p className="text-gray-700">{pub}</p>
           </div>
         </div>
         <div className="flex flex-col space-y-4">
           <div>
-            <h2 className="text-xl font-semibold text-gray-900">Author</h2>
+            <h3 className="text-xl font-semibold text-gray-900">Author</h3>
             <p className="text-gray-700">{name}</p>
           </div>
           <div>
-            <h2 className="text-xl font-semibold text-gray-900">Author Bio</h2>
+            <h3 className="text-xl font-semibold text-gray-900">Author Bio</h3>
             <p className="text-gray-700">{bio}</p>
           </div>
           <div>
-            <h2 className="text-xl font-semibold text-gray-900">
+            <h3 className="text-xl font-semibold text-gray-900">
               Author Birth
-            </h2>
+            </h3>
             <p className="text-gray-700">{birth}</p>
           </div>
         </div>
@@ -74,13 +74,13 @@ const Details = () => {
       <div className="mt-6">
         <Link
           to={`/dashboard/${data.id}/edit`}
-          className="btn btn-secondary"
+          className="btn btn-secondary float-end mb-5"
         >
           Edit
         </Link>
         <button
         to="/dashboard"
-          className="btn btn-danger mx-5"
+          className="btn btn-danger float-end mx-5 mb-5"
           onClick={() => {
            
             handleDelete(data.id);
@@ -91,7 +91,7 @@ const Details = () => {
         </button>
         <Link
           to="/dashboard"
-          className="btn btn-primary "
+          className="btn btn-primary float-end mb-5"
         >
           Back to Dashboard
         </Link>

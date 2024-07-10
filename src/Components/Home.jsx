@@ -9,7 +9,7 @@ const Home = () => {
           <h1 className='h1'>Welcome to PUBLIC LIBRARY</h1>
           <p className='p'>Manage your books and Author Details</p>
           <div className="tg">
-            <button className='btn btn-primary m-2'><Link to={`/dashboard`}>Dashboard</Link></button>
+            
           </div>
         </div>
       </div>
